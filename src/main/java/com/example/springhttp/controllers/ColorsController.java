@@ -1,4 +1,4 @@
-package com.example.springhttp.controller;
+package com.example.springhttp.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
