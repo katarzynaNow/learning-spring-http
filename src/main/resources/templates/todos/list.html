@@ -10,16 +10,26 @@
 <body>
 <div class="container">
     <div class="row">
-        <a class="btn btn-primary" th:href="@{/todos/create}">Create new task</a>
+        <div class="col-9">
+            <a class="btn btn-primary" th:href="@{/todos/create}" th:text="#{button.create}"></a>
+        </div>
+        <div class="col-3">
+            <a href="?lang=pl">
+                <img style="max-width: 25px" src="/flags/pl.png">
+            </a>
+            <a href="?lang=en">
+                <img style="max-width: 25px" src="/flags/en.png">
+            </a>
+        </div>
     </div>
   <table class="table">
       <thead>
       <tr>
           <th>#</th>
-          <th>Task</th>
-          <th>Deadline</th>
-          <th>Status</th>
-          <th>Action</th>
+          <th th:text="#{todo.task}"></th>
+          <th th:text="#{todo.deadline}"></th>
+          <th th:text="#{todo.status}"></th>
+          <th th:text="#{todo.actions}"></th>
       </tr>
       </thead>
       <tbody>
@@ -27,11 +37,11 @@
           <td th:text="${t.getId()}"></td>
           <td th:text="${t.getTask()}"></td>
           <td th:text="${t.getDeadline()}"></td>
-          <td th:text="${t.getStatus()}"></td>
+          <td th:style="'color: ' + ${@toDoUtils.color(t.getStatus())}" th:text="${t.getStatus()}"></td>
           <td>
-              <a th:unless="${t.getStatus().name().equals('NEW')}" class="btn btn-success" th:href="@{/todos/update(id=${t.getId()}, status='NEW')}">Change as NEW</a>
-              <a th:unless="${t.getStatus().name().equals('IN_PROGRESS')}" class="btn btn-warning" th:href="@{/todos/update(id=${t.getId()}, status='IN_PROGRESS')}">Change as IN_PROGRESS</a>
-              <a th:unless="${t.getStatus().name().equals('DONE')}" class="btn btn-info" th:href="@{/todos/update(id=${t.getId()}, status='DONE')}">Change as DONE</a>
+              <a th:unless="${t.getStatus().name().equals('NEW')}" class="btn btn-success" th:href="@{/todos/update(id=${t.getId()}, status='NEW')}" th:text="#{akcja.new}"></a>
+              <a th:unless="${t.getStatus().name().equals('IN_PROGRESS')}" class="btn btn-warning" th:href="@{/todos/update(id=${t.getId()}, status='IN_PROGRESS')}" th:text="#{akcja.in-progress}"></a>
+              <a th:unless="${t.getStatus().name().equals('DONE')}" class="btn btn-info" th:href="@{/todos/update(id=${t.getId()}, status='DONE')}" th:text="#{akcja.done}"></a>
           </td>
       </tr>
       </tbody>
