@@ -1,4 +1,4 @@
-package com.example.springhttp.Profile.service.common;
+package com.example.springhttp.common;
 
 public interface CrudResource<ID> {
 

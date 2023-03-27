@@ -1,7 +1,7 @@
-package com.example.springhttp.Profile.service;
+package com.example.springhttp.profile.service;
 
-import com.example.springhttp.Profile.model.Profile;
-import com.example.springhttp.Profile.service.common.CrudService;
+import com.example.springhttp.profile.model.Profile;
+import com.example.springhttp.common.CrudService;
 import org.springframework.stereotype.Service;
 
 @Service

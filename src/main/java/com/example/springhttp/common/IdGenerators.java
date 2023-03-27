@@ -1,4 +1,4 @@
-package com.example.springhttp.Profile.service.common;
+package com.example.springhttp.common;
 
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;

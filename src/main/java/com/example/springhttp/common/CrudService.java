@@ -1,6 +1,6 @@
-package com.example.springhttp.Profile.service.common;
+package com.example.springhttp.common;
 
-import com.example.springhttp.Profile.service.exception.NotFoundException;
+import com.example.springhttp.profile.service.exception.NotFoundException;
 
 
 import java.util.*;

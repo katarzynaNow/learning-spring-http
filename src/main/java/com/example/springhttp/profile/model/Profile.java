@@ -1,6 +1,6 @@
-package com.example.springhttp.Profile.model;
+package com.example.springhttp.profile.model;
 
-import com.example.springhttp.Profile.service.common.CrudResource;
+import com.example.springhttp.common.CrudResource;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;

@@ -1,4 +1,4 @@
-package com.example.springhttp.Profile.service.exception;
+package com.example.springhttp.profile.service.exception;
 
 public class NotFoundException extends RuntimeException {
 

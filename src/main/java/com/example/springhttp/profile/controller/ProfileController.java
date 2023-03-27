@@ -1,8 +1,8 @@
-package com.example.springhttp.Profile.controller;
+package com.example.springhttp.profile.controller;
 
-import com.example.springhttp.Profile.model.Profile;
-import com.example.springhttp.Profile.service.ProfileService;
-import com.example.springhttp.Profile.service.exception.NotFoundException;
+import com.example.springhttp.profile.model.Profile;
+import com.example.springhttp.profile.service.ProfileService;
+import com.example.springhttp.profile.service.exception.NotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
